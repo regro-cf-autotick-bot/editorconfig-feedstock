@@ -1,5 +1,5 @@
 {% set name = "EditorConfig" %}
-{% set version = "0.12.3" %}
+{% set version = "0.12.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/EditorConfig-{{ version }}.tar.gz
-  sha256: 57f8ce78afcba15c8b18d46b5170848c88d56fd38f05c2ec60dbbfcb8996e89e
+  sha256: 24857fa1793917dd9ccf0c7810a07e05404ce9b823521c7dce22a4fb5d125f80
 
 build:
   number: 0
