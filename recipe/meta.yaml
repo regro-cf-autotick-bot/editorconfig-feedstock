@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/EditorConfig-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/EditorConfig-{{ version }}.tar.gz
   sha256: 57f8ce78afcba15c8b18d46b5170848c88d56fd38f05c2ec60dbbfcb8996e89e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - editorconfig = editorconfig.__main__:main
@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +32,7 @@ test:
     - editorconfig --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://editorconfig.org/
